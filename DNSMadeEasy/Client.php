@@ -18,6 +18,8 @@ use DNSMadeEasy\driver\REST;
  * @link https://github.com/F21/DNSMadeEasy
  * @license http://www.apache.org/licenses/LICENSE-2.0.html Apache 2 License
  */
+ 
+ // modifié par DCo
 class Client
 {
     /**
