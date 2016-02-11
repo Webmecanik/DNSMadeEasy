@@ -56,6 +56,15 @@ class Domains
     }
 
     /**
+     * Get one domain by its domainname.
+     * @param  string             $domainname
+     * @return \DNSMadeEasy\Result
+     */
+    public function getByName($domainname)
+    {
+    	return $this->_driver->get("/dns/managed/name?domainname={$domainname}");
+    }
+    /**
      * Add a domain.
      * @param  array|string        $domain If domain is an array, add multiple domains. If it is a string, just add one domain.
      * @param  array               $config An array of configuration to apply to the domain or domains.
