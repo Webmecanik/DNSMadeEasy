@@ -103,10 +103,6 @@ class Result
         if (isset($response->getHeaders()['x-dnsme-requestLimit'])) {
             $this->requestLimit = $response->getHeaders()['x-dnsme-requestLimit'];
         }
-
-        if(!$this->success){
-        	throw new ResultErrorException($this);
-        }
     }
     
     public function __toString(){

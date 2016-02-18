@@ -163,8 +163,8 @@ class REST
         curl_setopt($ch, CURLINFO_HEADER_OUT, true);
         curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
-
-        if($this->_config->usingSandbox()){
+		
+        if(true || $this->_config->usingSandbox()){ //TODO le true ajouté par DDC pour bypass le control
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); //Temporary workaround because https://api.sandbox.dnsmadeeasy.com uses a bad certificate
             curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         }else{
